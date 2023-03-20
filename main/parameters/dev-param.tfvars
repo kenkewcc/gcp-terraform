@@ -1,0 +1,8 @@
+var.region = "asia-southeast1"
+var.env = "dev"
+var.k8s_env = "dev"
+var.project_id = "gcp-proj"
+var.network_priv_subnet_ip = "10.10.0.0"
+var.network_pub_subnet_ip = "10.10.10.0"
+var.network_2nd_subnet_ip = "10.10.20.0"
+var.master_cidr_subnet_ip = "10.10.30.0"

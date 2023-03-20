@@ -1,0 +1,22 @@
+1. Use Google Cloud Managed Prometheus for monitoring
+  We Use node exporter to export all the node metrics. It can monitor the following
+ - I/O usage
+ - Network usage
+ - CPU
+ - Memory
+ - Diskpace usage
+
+  We can additional exporter for databases / nginx / apache/ to monitor those services.
+
+We can configure HPA based on the pod metrics we collected.
+Then, we can use cluster autoscaler to scale vertically based on node metrics. 
+As for alerting, we can use alertmanager to fire the alert to user when certain threshold breach.
+
+2. Use Cloud Monitoring for monitoring 
+  We can use the kubernetes metrics that are collected when we enable system metrics in GKE.
+  We can configure alert for load balancer sudden spike or when 4xx/5xx too high
+
+3. We can use tool like opentracing, istio, newrelic or similar tool to trail the request.
+ - Monitor the latency when it pass through certain point. 
+ - Monitor application/network performance.
+
